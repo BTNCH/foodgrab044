@@ -1,14 +1,9 @@
-<body style="background-color:#A1DCD8">
-    
-
 <br><br>
 
 <div class="container">
-    <div class="row">
-
+    {{!-- <div class="row">
         {{#each restaurants}}
         <div class="col-4">
-            <div class="card-deck">
                 <div class="card" style="margin-bottom: 5%;">
                     <img src="{{imgUrl}}" class="card-img-top" >
                     <div class="card-body">
@@ -16,11 +11,26 @@
                         <p class="card-text">{{type}}</p>
                     </div>
                 </div>
-            </div><br>
+            <br>
+        </div>
+        {{/each}}
+    </div> --}}
+    <div class="row">
+        {{#each restaurants}}
+        <div class="column">
+            <div class="card">
+                <div class="card" style="margin-bottom: 5%;">
+                    <img src="{{imgUrl}}" class="card-img-top">
+                    <div class="card-body">
+                        <h6 class="card-title"><b>{{name}}</b></h6>
+                        <p class="card-text">{{type}}</p>
+                    </div>
+                </div>
+            </div>
         </div>
         {{/each}}
     </div>
-</div>
 
-    
-</body>
+
+
+</div>
